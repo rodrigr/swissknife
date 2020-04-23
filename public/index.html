@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>swissknife</title>
+	<link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+	<div id="app">
+		<navigator :userdata="user" :login-fn="login" :logout-fn="logout"></navigator>
+		<calc :db="database" :userdata="user" :history="calcHistory"></calc>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>	
+	<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyB82I1-2Y8DfEdPqaUB9OpY2_t33UBjc38",
+	    authDomain: "swissknifeapp.firebaseapp.com",
+	    databaseURL: "https://swissknifeapp.firebaseio.com",
+	    projectId: "swissknifeapp",
+	    storageBucket: "swissknifeapp.appspot.com",
+	    messagingSenderId: "649722390807",
+	    appId: "1:649722390807:web:d3a6567d32a39f2eb5ef52",
+	    measurementId: "G-HL04RGKHZC"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	 </script>
+	 <script src="assets/scripts/calchistory.js"></script>
+	 <script src="assets/scripts/navigator.js"></script>
+	 <script src="assets/scripts/calc.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</body>
+</html>
